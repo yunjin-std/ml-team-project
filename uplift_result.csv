@@ -1,0 +1,7 @@
+customer_id,uplift_score,segment,recommendation,top_factor_1,top_factor_2,top_factor_3
+1001,0.083,Persuadable,Send,history,mens,recency
+1002,0.012,Sure Thing,Do not send,history,channel,newbie
+1003,-0.021,Sleeping Dog,Do not send,womens,recency,channel
+1004,0.065,Persuadable,Send,history,mens,newbie
+1005,-0.010,Lost Cause,Do not send,channel,history,recency
+1006,0.092,Persuadable,Send,mens,history,channel
