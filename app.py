@@ -71,33 +71,7 @@ if uploaded_file is not None:
 else:
     df = pd.read_csv("uplift_result.csv")
 
-# 필요한 컬럼 자동 생성
-if "recommendation" not in df.columns:
-    df["recommendation"] = df["uplift_score"].apply(
-        lambda x: "Send" if x > 0 else "Do not send"
-    )
 
-if "segment" not in df.columns:
-    def classify_segment(score):
-        if score > 0.05:
-            return "Persuadable"
-        elif score > 0:
-            return "Sure Thing"
-        elif score > -0.05:
-            return "Sleeping Dog"
-        else:
-            return "Lost Cause"
-
-    df["segment"] = df["uplift_score"].apply(classify_segment)
-
-if "top_factor_1" not in df.columns:
-    df["top_factor_1"] = "history"
-
-if "top_factor_2" not in df.columns:
-    df["top_factor_2"] = "mens"
-
-if "top_factor_3" not in df.columns:
-    df["top_factor_3"] = "recency"
 
 recommended_df = df[df["recommendation"] == "Send"]
 
