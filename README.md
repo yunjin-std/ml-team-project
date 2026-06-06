@@ -1,2 +1,13 @@
-# ml-team-project
-Uplift Modeling 기반 마케팅 타겟 최적화
+# Marketing Target Optimization Dashboard
+
+Machine Learning Team Project
+
+## Features
+- Customer Result Analysis
+- Segment Analysis
+- ROI Simulation
+- SHAP Explanation
+
+## Run
+
+streamlit run app.py
